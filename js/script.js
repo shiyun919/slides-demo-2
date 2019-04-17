@@ -1,3 +1,6 @@
+
+
+
 $(document).ready(function(){
     /* This code is executed after the DOM has been completely loaded */
 
@@ -25,8 +28,8 @@ $(document).ready(function(){
     $('#menu ul li a').click(function(e){
 
         /* On a thumbnail click */
-        $('li.menuItem').removeClass('act').addClass('inact');
-        $(this).parent().addClass('act');
+        $('#menu ul li ').addClass('active').siblings('active').removeClass('active');
+        $(this).parent().addClass('active');
 
         var pos = $(this).parent().prevAll('.menuItem').length;
 
@@ -37,6 +40,6 @@ $(document).ready(function(){
         /* Prevent the default action of the link */
     });
 
-    $('#menu ul li.menuItem:first').addClass('act').siblings().addClass('inact');
+    $('#menu ul li.menuItem:first').addClass('active');
     /* On page load, mark the first thumbnail as active */
 });
